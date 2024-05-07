@@ -1,0 +1,55 @@
+.slot-skeleton-loading__label {
+  height: 16px;
+  width: 200px;
+  border-radius: 4px;
+  background-color: var(--grey);
+  position: relative;
+}
+
+.slot-skeleton-loading__slot-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 6px;
+  padding: 4px 0;
+}
+
+.slot-skeleton-loading__slot {
+  height: 50px;
+  width: 344px;
+  border-radius: 10px;
+  background-color: var(--grey);
+  position: relative;
+}
+
+.slot-skeleton-loading__label::after,
+.slot-skeleton-loading__slot::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0)
+  );
+  animation: shimmer 1s infinite;
+  animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  content: "";
+}
+
+@keyframes shimmer {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 452px) {
+  .slot-skeleton-loading__slot {
+    width: 280px;
+  }
+}

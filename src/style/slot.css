@@ -1,0 +1,160 @@
+.slot-selection-wrapper {
+  padding: 40px 40px 20px 40px;
+  border-radius: 0 12px 0 0;
+  background: white;
+}
+
+.slot-selection {
+  border-bottom: 2px solid var(--dark3);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.input-label {
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--dark2);
+  text-transform: uppercase;
+}
+
+.appointment-time-select {
+  margin-top: 4px;
+  padding: 12px;
+  width: 344px;
+  border-width: 2px;
+  border-radius: 10px;
+  border-color: var(--dark3);
+  box-shadow: none;
+  outline: none;
+
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.time-slots-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  margin-top: 4px;
+  padding: 4px 0;
+  position: relative;
+
+  height: 244px;
+  overflow: auto;
+  scrollbar-width: none;
+
+  background: linear-gradient(white 30%, rgba(255, 255, 255, 0)),
+    linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%,
+    radial-gradient(
+      farthest-side at 50% 0,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0)
+    ),
+    radial-gradient(
+        farthest-side at 50% 100%,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0)
+      )
+      0 100%;
+
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
+}
+
+.time-slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+
+  position: relative;
+  padding: 12px;
+  width: 344px;
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.time-slot-format {
+  z-index: 1;
+  line-height: 1.9;
+}
+
+.time-slot::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--primary);
+  transition: all 0.3s;
+  border-radius: inherit;
+}
+
+.animation-span {
+  transition: flex 0.3s;
+  flex: 0;
+}
+
+.check-icon {
+  z-index: 1;
+  opacity: 0;
+  width: 0px;
+  transition: all 1s;
+}
+
+.time-slot:hover::before {
+  width: 100%;
+}
+
+.time-slot:hover {
+  color: #fff;
+  border: 1px solid white;
+}
+
+.time-slot.time-slot--active {
+  color: white;
+  border: 1px solid white;
+}
+
+.time-slot.time-slot--active::before {
+  width: 100%;
+}
+
+.time-slot.time-slot--active .animation-span {
+  flex: 1;
+}
+
+.time-slot.time-slot--active .check-icon {
+  width: fit-content;
+  opacity: 1;
+}
+
+@media screen and (max-width: 872px) {
+  .slot-selection-wrapper {
+    border-radius: 0px;
+  }
+}
+
+@media screen and (max-width: 452px) {
+  .slot-selection-wrapper {
+    padding: 40px 16px;
+  }
+  .appointment-time-select {
+    width: 280px;
+  }
+  .time-slot {
+    width: 280px;
+  }
+}

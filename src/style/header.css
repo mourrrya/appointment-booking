@@ -1,0 +1,38 @@
+.app-header {
+  padding: 8px 40px;
+  position: sticky;
+  z-index: 2;
+  top: 0px;
+  background: white;
+  box-shadow: 0px 2px 4px 0px #60617029;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  color: var(--dark);
+}
+
+.app-menu > span {
+  cursor: pointer;
+}
+
+.logo-img {
+  width: 180px;
+}
+
+@media screen and (max-width: 452px) {
+  .app-menu {
+    display: none;
+  }
+}
