@@ -28,7 +28,7 @@ export const displayTimeFormat = (dateString: string) => {
   const date = new Date(dateString);
 
   const hours = date.getUTCHours();
-  let minutes = date.getMinutes();
+  const minutes = date.getMinutes();
 
   const formattedHours = hours % 12 || 12;
   const formattedMin = minutes < 10 ? `0${minutes}` : minutes;
