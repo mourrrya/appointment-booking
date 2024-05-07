@@ -1,21 +1,27 @@
 # Getting Started with Appointment Booking
 
-### `Installation`
+## Table of Contents
 
-#### `version`
+- [Installation](#installation)
+- [Usage](#usage)
 
-`node v20.11.0`
-`npm v10.2.4`
+## Installation
 
-```
-npm install
+1. Ensure you have Node.js and npm installed. This project requires:
+   - Node.js v20.11.0
+   - npm v10.2.4
 
-```
+2. Clone the repository:
+   - git clone https://github.com/your_username/sidepanda-appointment-booking.git
 
-### `npm start`
+3. Install the project dependencies:
+   - `npm install`
 
-Runs the app in the development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Usage
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+To run the application in development mode:
+
+  -  `npm start`
+
+
+
